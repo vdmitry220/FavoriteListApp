@@ -13,9 +13,11 @@
 		3AFCAC9228C0ECF600F3B1A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFCAC9028C0ECF600F3B1A6 /* Main.storyboard */; };
 		3AFCAC9428C0ECF800F3B1A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AFCAC9328C0ECF800F3B1A6 /* Assets.xcassets */; };
 		3AFCAC9728C0ECF800F3B1A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFCAC9528C0ECF800F3B1A6 /* LaunchScreen.storyboard */; };
+		D354920143C56E37C2F44F18 /* Pods_FavoriteListApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7219F34AA3BF6BCA1F7CEC /* Pods_FavoriteListApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CF561F64D2199070A1A3505 /* Pods-FavoriteListApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FavoriteListApp.debug.xcconfig"; path = "Target Support Files/Pods-FavoriteListApp/Pods-FavoriteListApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3AFCAC8728C0ECF600F3B1A6 /* FavoriteListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFCAC8A28C0ECF600F3B1A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AFCAC8C28C0ECF600F3B1A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		3AFCAC9328C0ECF800F3B1A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AFCAC9628C0ECF800F3B1A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AFCAC9828C0ECF800F3B1A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA96D011B3C0B2D2FAB4F43A /* Pods-FavoriteListApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FavoriteListApp.release.xcconfig"; path = "Target Support Files/Pods-FavoriteListApp/Pods-FavoriteListApp.release.xcconfig"; sourceTree = "<group>"; };
+		BF7219F34AA3BF6BCA1F7CEC /* Pods_FavoriteListApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FavoriteListApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D354920143C56E37C2F44F18 /* Pods_FavoriteListApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				3AFCAC8928C0ECF600F3B1A6 /* FavoriteListApp */,
 				3AFCAC8828C0ECF600F3B1A6 /* Products */,
+				4EC2C674218D1997680A41F2 /* Pods */,
+				4C5CBA08433F5B4D6394F762 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = FavoriteListApp;
 			sourceTree = "<group>";
 		};
+		4C5CBA08433F5B4D6394F762 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF7219F34AA3BF6BCA1F7CEC /* Pods_FavoriteListApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EC2C674218D1997680A41F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CF561F64D2199070A1A3505 /* Pods-FavoriteListApp.debug.xcconfig */,
+				AA96D011B3C0B2D2FAB4F43A /* Pods-FavoriteListApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AFCAC9B28C0ECF800F3B1A6 /* Build configuration list for PBXNativeTarget "FavoriteListApp" */;
 			buildPhases = (
+				23ABD0C2A092FD428F0831D5 /* [CP] Check Pods Manifest.lock */,
 				3AFCAC8328C0ECF600F3B1A6 /* Sources */,
 				3AFCAC8428C0ECF600F3B1A6 /* Frameworks */,
 				3AFCAC8528C0ECF600F3B1A6 /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23ABD0C2A092FD428F0831D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FavoriteListApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3AFCAC8328C0ECF600F3B1A6 /* Sources */ = {
@@ -284,6 +335,7 @@
 		};
 		3AFCAC9C28C0ECF800F3B1A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CF561F64D2199070A1A3505 /* Pods-FavoriteListApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +363,7 @@
 		};
 		3AFCAC9D28C0ECF800F3B1A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA96D011B3C0B2D2FAB4F43A /* Pods-FavoriteListApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
