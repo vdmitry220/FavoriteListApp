@@ -9,9 +9,16 @@ class ServiceAssembly {}
 
 extension ServiceAssembly: Assembly {
     
-    func assemble(container: Container) {}
+    func assemble(container: Container) {
+        assemblyDataService(container: container)
+    }
 }
 
 // MARK: - PrivateAssembly
 
-private extension ServiceAssembly {}
+private extension ServiceAssembly {
+    
+    func assemblyDataService(container: Container) {
+        container.autoregister(DataService.self, initializer: DataServiceImp.init).inObjectScope(.container)
+    }
+}

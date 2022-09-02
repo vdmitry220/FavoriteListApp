@@ -7,6 +7,10 @@ protocol NewFilmView: AnyObject {
 
 class NewFilmViewController: UIViewController {
     
+    @IBOutlet private weak var movieTtitle: UITextField!
+    @IBOutlet private weak var year: UITextField!
+    @IBOutlet private weak var addButton: UIButton!
+    
     private var presenter: NewFilmPresenter!
 
 
@@ -19,6 +23,9 @@ class NewFilmViewController: UIViewController {
         self.presenter = presenter
     }
     
+    @IBAction func addDidTap(_ sender: Any) {
+        self.presenter.getDescription(title: movieTtitle.text ?? "", year: year.text ?? "")
+    }
 }
 
 extension NewFilmViewController: NewFilmView {

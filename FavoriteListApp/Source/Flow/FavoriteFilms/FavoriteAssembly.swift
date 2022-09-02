@@ -23,9 +23,12 @@ extension FavoriteAssembly: Assembly {
         
         container.register(FavoritePresenter.self) { (resolver, view: ViewController) in
             let coordinator = resolver ~> FavoriteCoordinator.self
+            let dataService = resolver.resolve(DataService.self)!
+            
             return FavoritePresenterImp(
                 view: view,
-                coordinator: coordinator)
+                coordinator: coordinator,
+                dataService: dataService)
         }
     }
 }

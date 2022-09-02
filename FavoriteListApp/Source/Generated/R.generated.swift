@@ -179,6 +179,26 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  struct nib {
+    /// Nib `FavoriteTableViewCell`.
+    static let favoriteTableViewCell = _R.nib._FavoriteTableViewCell()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "FavoriteTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.favoriteTableViewCell) instead")
+    static func favoriteTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.favoriteTableViewCell)
+    }
+    #endif
+
+    static func favoriteTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> FavoriteTableViewCell? {
+      return R.nib.favoriteTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? FavoriteTableViewCell
+    }
+
+    fileprivate init() {}
+  }
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()
@@ -198,6 +218,23 @@ struct _R: Rswift.Validatable {
     try storyboard.validate()
     #endif
   }
+
+  #if os(iOS) || os(tvOS)
+  struct nib {
+    struct _FavoriteTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "FavoriteTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> FavoriteTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? FavoriteTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+  #endif
 
   #if os(iOS) || os(tvOS)
   struct storyboard: Rswift.Validatable {

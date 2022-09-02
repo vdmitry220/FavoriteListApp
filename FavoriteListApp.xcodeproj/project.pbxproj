@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AC0261A28C2603700BD39A6 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0261828C2603700BD39A6 /* FavoriteTableViewCell.swift */; };
+		3AC0261B28C2603700BD39A6 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC0261928C2603700BD39A6 /* FavoriteTableViewCell.xib */; };
+		3AC0262028C2629C00BD39A6 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0261F28C2629C00BD39A6 /* Movie.swift */; };
+		3AC0262328C269B600BD39A6 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0262228C269B600BD39A6 /* DataService.swift */; };
 		3AFCAC8B28C0ECF600F3B1A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFCAC8A28C0ECF600F3B1A6 /* AppDelegate.swift */; };
 		3AFCAC8D28C0ECF600F3B1A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFCAC8C28C0ECF600F3B1A6 /* SceneDelegate.swift */; };
 		3AFCAC8F28C0ECF600F3B1A6 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFCAC8E28C0ECF600F3B1A6 /* FavoriteViewController.swift */; };
@@ -32,6 +36,10 @@
 
 /* Begin PBXFileReference section */
 		0CF561F64D2199070A1A3505 /* Pods-FavoriteListApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FavoriteListApp.debug.xcconfig"; path = "Target Support Files/Pods-FavoriteListApp/Pods-FavoriteListApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3AC0261828C2603700BD39A6 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		3AC0261928C2603700BD39A6 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		3AC0261F28C2629C00BD39A6 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		3AC0262228C269B600BD39A6 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		3AFCAC8728C0ECF600F3B1A6 /* FavoriteListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFCAC8A28C0ECF600F3B1A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AFCAC8C28C0ECF600F3B1A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +78,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AC0261328C25FBF00BD39A6 /* FavoriteTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3AC0261828C2603700BD39A6 /* FavoriteTableViewCell.swift */,
+				3AC0261928C2603700BD39A6 /* FavoriteTableViewCell.xib */,
+			);
+			path = FavoriteTableViewCell;
+			sourceTree = "<group>";
+		};
+		3AC0261C28C2623400BD39A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3AC0261F28C2629C00BD39A6 /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3AC0262128C2699100BD39A6 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				3AC0262228C269B600BD39A6 /* DataService.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
 		3AFCAC7E28C0ECF600F3B1A6 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +150,8 @@
 				3AFCACA128C1166000F3B1A6 /* Launch */,
 				3AFCACA028C115DA00F3B1A6 /* FavoriteFilms */,
 				3AFCACA828C1176600F3B1A6 /* NewFilm */,
+				3AC0262128C2699100BD39A6 /* Logic */,
+				3AC0261C28C2623400BD39A6 /* Model */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -129,6 +164,7 @@
 				3AFCACAD28C1180400F3B1A6 /* FavoriteAssembly.swift */,
 				3AFCACAF28C1186C00F3B1A6 /* FavoriteCoordinator.swift */,
 				3AFCAC9028C0ECF600F3B1A6 /* Main.storyboard */,
+				3AC0261328C25FBF00BD39A6 /* FavoriteTableViewCell */,
 			);
 			path = FavoriteFilms;
 			sourceTree = "<group>";
@@ -292,6 +328,7 @@
 			files = (
 				3AFCAC9728C0ECF800F3B1A6 /* LaunchScreen.storyboard in Resources */,
 				3AFCAC9428C0ECF800F3B1A6 /* Assets.xcassets in Resources */,
+				3AC0261B28C2603700BD39A6 /* FavoriteTableViewCell.xib in Resources */,
 				3AFCAC9228C0ECF600F3B1A6 /* Main.storyboard in Resources */,
 				3AFCACD028C2170900F3B1A6 /* NewFilm.storyboard in Resources */,
 			);
@@ -368,10 +405,13 @@
 			files = (
 				3AFCACAA28C1179700F3B1A6 /* AppCoordinator.swift in Sources */,
 				3AFCACC228C11D5200F3B1A6 /* ServiceAssembly.swift in Sources */,
+				3AC0262028C2629C00BD39A6 /* Movie.swift in Sources */,
 				3AFCACCA28C124CD00F3B1A6 /* R.generated.swift in Sources */,
 				3AFCACC028C11D4400F3B1A6 /* FlowAssembly.swift in Sources */,
 				3AFCAC8F28C0ECF600F3B1A6 /* FavoriteViewController.swift in Sources */,
+				3AC0262328C269B600BD39A6 /* DataService.swift in Sources */,
 				3AFCACCC28C12FA800F3B1A6 /* Route.swift in Sources */,
+				3AC0261A28C2603700BD39A6 /* FavoriteTableViewCell.swift in Sources */,
 				3AFCAC8B28C0ECF600F3B1A6 /* AppDelegate.swift in Sources */,
 				3AFCACCE28C216EE00F3B1A6 /* NewFilmViewController.swift in Sources */,
 				3AFCACC428C11D6D00F3B1A6 /* Coordinator.swift in Sources */,

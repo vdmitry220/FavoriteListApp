@@ -31,9 +31,9 @@ extension NewFilmCoordinator: Coordinator {
     func navigate(_ rout: Rout) {
         switch rout {
         case .push:
-            openView()
+            closeView()
         case .pop:
-            return
+            closeView()
         default:
             return
         }
@@ -44,7 +44,8 @@ extension NewFilmCoordinator: Coordinator {
 
 private extension NewFilmCoordinator {
 
-    func openView() {
-        
+    func closeView() {
+        let newFilmViewController = resolver ~> ViewController.self
+        self.navigationController.pushViewController(newFilmViewController, animated: true)
     }
 }

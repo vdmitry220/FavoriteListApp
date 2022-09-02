@@ -22,10 +22,13 @@ extension NewFilmAssembly: Assembly {
         }
         
         container.register(NewFilmPresenter.self) { (resolver, view: NewFilmViewController) in
-            let coordinator = resolver ~> NewFilmCoordinator.self
+            let coordinator = resolver.resolve(NewFilmCoordinator.self)!
+            let dataService = resolver.resolve(DataService.self)!
+            
             return NewFilmPresenterImp(
                 view: view,
-                coordinator: coordinator)
+                coordinator: coordinator,
+                dataService: dataService)
         }
     }
 }

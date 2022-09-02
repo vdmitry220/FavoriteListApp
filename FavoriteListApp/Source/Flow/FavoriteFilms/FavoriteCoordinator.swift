@@ -45,7 +45,7 @@ extension FavoriteCoordinator: Coordinator {
 private extension FavoriteCoordinator {
     
     func openView() {
-//        let newFilmViewController = resolver ~> NewFilmViewController.self
-//        self.navigationController.pushViewController(newFilmViewController, animated: true)
+        let newFilmViewController = resolver ~> NewFilmViewController.self
+        self.navigationController.pushViewController(newFilmViewController, animated: true)
     }
 }
