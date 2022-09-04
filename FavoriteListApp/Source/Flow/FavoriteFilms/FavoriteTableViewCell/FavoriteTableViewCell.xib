@@ -20,16 +20,16 @@
                         <rect key="frame" x="20" y="11" width="574" height="335"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jhbdsajkbkjsabnkjasdnkjasdnbkjasb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Fn-bk-zKL" userLabel="Title">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="335"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Y1F-Xj-yqj"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="524" height="335"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bjkasbdkjabsdkjabnsdkj" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V52-Jp-xWA" userLabel="Year">
-                                <rect key="frame" x="200" y="0.0" width="374" height="335"/>
+                                <rect key="frame" x="524" y="0.0" width="50" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="tJ6-0W-vbG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -39,7 +39,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="bs5-pO-dQw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Gk6-Rd-wcm"/>
-                    <constraint firstItem="bs5-pO-dQw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RaR-rp-oRd"/>
+                    <constraint firstAttribute="bottom" secondItem="bs5-pO-dQw" secondAttribute="bottom" constant="11" id="Rs2-63-kFs"/>
                     <constraint firstItem="bs5-pO-dQw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="XAC-w8-UY8"/>
                     <constraint firstItem="bs5-pO-dQw" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="dvN-oY-T9D"/>
                 </constraints>

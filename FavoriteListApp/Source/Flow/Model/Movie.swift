@@ -1,7 +1,7 @@
 
 import Foundation
 
-struct Movie {
+struct Movie: Codable {
     var title: String
     var year: Int
 }

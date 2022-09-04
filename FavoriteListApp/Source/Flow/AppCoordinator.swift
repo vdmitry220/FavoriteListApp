@@ -24,12 +24,10 @@ extension AppCoordinator: Coordinator {
     
     func start() {
         let favoriteCoordinator = resolver ~> FavoriteCoordinator.self
-        let newFilmCoordinator = resolver ~> NewFilmCoordinator.self
         
-        navigationController.setViewControllers([favoriteCoordinator.root, newFilmCoordinator.root], animated: false)
+        navigationController.setViewControllers([favoriteCoordinator.root], animated: false)
         
         favoriteCoordinator.start()
-        newFilmCoordinator.start()
     }
     
     func navigate(_ rout: Rout) {}

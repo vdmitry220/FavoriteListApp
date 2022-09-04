@@ -31,12 +31,11 @@ extension NewFilmPresenterImp: NewFilmPresenter {
     
     func getDescription(title: String, year: String) {
         let movieYear = Int(year) ?? 0
-        let text = title
         self.dataService?.addDescription(title: title, year: movieYear)
         closeView()
     }
     
     func closeView() {
-        self.coordinator?.navigate(.push)
+        self.coordinator?.navigate(.pop)
     }
 }

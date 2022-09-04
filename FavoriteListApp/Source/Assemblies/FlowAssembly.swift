@@ -18,9 +18,5 @@ extension FlowAssembly: Assembly {
         container.register(FavoriteCoordinator.self) { (resolver) in
             FavoriteCoordinator(resolver: resolver)
         }.inObjectScope(.container)
-        
-        container.register(NewFilmCoordinator.self) { (resolver) in
-            NewFilmCoordinator(resolver: resolver)
-        }.inObjectScope(.container)
     }
 }

@@ -66,7 +66,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteTableViewCell.reuseIdentifier, for: indexPath) as! FavoriteTableViewCell
         let model = self.presenter.decription[indexPath.row]
-        cell.setLabel(title: model.title)
+        cell.updateLabel(model: model)
         
         return cell
     }

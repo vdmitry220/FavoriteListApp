@@ -33,7 +33,7 @@ extension FavoriteCoordinator: Coordinator {
         case .push:
             openView()
         case .pop:
-            return
+            closeView()
         default:
             return
         }
@@ -47,5 +47,9 @@ private extension FavoriteCoordinator {
     func openView() {
         let newFilmViewController = resolver ~> NewFilmViewController.self
         self.navigationController.pushViewController(newFilmViewController, animated: true)
+    }
+    
+    func closeView() {
+        self.navigationController.popViewController(animated: true)
     }
 }
