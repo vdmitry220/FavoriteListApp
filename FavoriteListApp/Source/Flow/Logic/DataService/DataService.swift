@@ -25,8 +25,11 @@ extension DataServiceImp: DataService {
         let movieYear = Int(year)
         let description = Movie(title: title, year: movieYear)
         
-        movieDescription.append(description)
-        print(movieDescription)
+        if movieDescription.contains(where: { $0.title == title }) {
+            return
+        } else {
+            movieDescription.append(description)
+        }
     }
 }
 

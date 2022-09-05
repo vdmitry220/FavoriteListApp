@@ -28,6 +28,7 @@ extension AppCoordinator: Coordinator {
         navigationController.setViewControllers([favoriteCoordinator.root], animated: false)
         
         favoriteCoordinator.start()
+        
     }
     
     func navigate(_ rout: Rout) {}

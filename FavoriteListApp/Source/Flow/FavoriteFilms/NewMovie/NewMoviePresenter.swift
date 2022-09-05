@@ -2,20 +2,20 @@
 import Foundation
 import Rswift
 
-protocol NewFilmPresenter {
+protocol NewMoviePresenter {
     
     func getDescription(title: String, year: String)
 }
 
-final class NewFilmPresenterImp {
+final class NewMoviePresenterImp {
     
-    private weak var view: NewFilmView?
+    private weak var view: NewMovieView?
     private weak var coordinator: Coordinator?
     private weak var dataService: DataService?
 
     
     init(
-        view: NewFilmView,
+        view: NewMovieView,
         coordinator: Coordinator,
         dataService: DataService) {
             
@@ -27,7 +27,7 @@ final class NewFilmPresenterImp {
 
 // MARK: - NewFilmPresenter
 
-extension NewFilmPresenterImp: NewFilmPresenter {
+extension NewMoviePresenterImp: NewMoviePresenter {
     
     func getDescription(title: String, year: String) {
         let movieYear = Int(year) ?? 0

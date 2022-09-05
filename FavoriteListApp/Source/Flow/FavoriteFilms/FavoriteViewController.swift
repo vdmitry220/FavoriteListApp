@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private var presenter: FavoritePresenter!
-    var titleBar = "Favorite films"
+    var titleBar = "Favorite movies"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,10 +47,10 @@ extension ViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add,
             target: self,
-            action: #selector(didTapButton(_:)))
+            action: #selector(didTapAddButton(_:)))
     }
     
-    @objc func didTapButton(_ sender: UIButton) {
+    @objc func didTapAddButton(_ sender: UIButton) {
         self.presenter.openView()
     }
 }
@@ -79,7 +79,8 @@ extension ViewController {
     func setupTable() {
         tableView.register(UINib(
             nibName: FavoriteTableViewCell.reuseIdentifier,
-            bundle: nil), forCellReuseIdentifier: FavoriteTableViewCell.reuseIdentifier)
+            bundle: nil),
+            forCellReuseIdentifier: FavoriteTableViewCell.reuseIdentifier)
         
         tableView.delegate = self
         tableView.dataSource = self

@@ -284,20 +284,20 @@ struct _R: Rswift.Validatable {
 
     #if os(iOS) || os(tvOS)
     struct newFilm: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = NewFilmViewController
+      typealias InitialController = NewMovieViewController
 
       let bundle = R.hostingBundle
       let name = "NewFilm"
-      let newFilm = StoryboardViewControllerResource<NewFilmViewController>(identifier: "NewFilm.")
+      let newFilm = StoryboardViewControllerResource<NewMovieViewController>(identifier: "NewFilm.")
 
-      func newFilm(_: Void = ()) -> NewFilmViewController? {
+      func newFilm(_: Void = ()) -> NewMovieViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: newFilm)
       }
 
       static func validate() throws {
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
-        if _R.storyboard.newFilm().newFilm() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'newFilm' could not be loaded from storyboard 'NewFilm' as 'NewFilmViewController'.") }
+        if _R.storyboard.newFilm().newFilm() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'newFilm' could not be loaded from storyboard 'NewFilm' as 'NewMovieViewController'.") }
       }
 
       fileprivate init() {}

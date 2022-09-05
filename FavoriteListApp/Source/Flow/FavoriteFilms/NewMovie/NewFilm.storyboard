@@ -8,18 +8,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--New Film View Controller-->
+        <!--New Movie View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="NewFilm." id="Y6W-OH-hqX" customClass="NewFilmViewController" customModule="FavoriteListApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewFilm." id="Y6W-OH-hqX" customClass="NewMovieViewController" customModule="FavoriteListApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="QfQ-gk-DkK">
-                                <rect key="frame" x="10" y="104" width="394" height="95"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="QfQ-gk-DkK">
+                                <rect key="frame" x="10" y="104" width="394" height="152"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sho-zQ-ILJ" userLabel="Title">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sho-zQ-ILJ" userLabel="Title">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="yIL-ki-T2H"/>
@@ -27,7 +27,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0r4-bZ-cWI" userLabel="Year">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0r4-bZ-cWI" userLabel="Year">
                                         <rect key="frame" x="0.0" y="55" width="394" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="tKw-98-Ah4"/>
@@ -35,24 +35,29 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="bottom" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOl-al-eFO">
+                                        <rect key="frame" x="0.0" y="110" width="394" height="42"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                                        <connections>
+                                            <action selector="addDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8oJ-65-aPk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="lOl-al-eFO" secondAttribute="bottom" id="Lri-9C-jh6"/>
+                                    <constraint firstItem="lOl-al-eFO" firstAttribute="leading" relation="lessThanOrEqual" secondItem="QfQ-gk-DkK" secondAttribute="leading" constant="30" id="Vkc-fy-AYQ"/>
+                                    <constraint firstItem="lOl-al-eFO" firstAttribute="top" secondItem="0r4-bZ-cWI" secondAttribute="bottom" constant="15" id="Xp6-vE-O3L"/>
+                                </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOl-al-eFO">
-                                <rect key="frame" x="10" y="294" width="394" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
-                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Add"/>
-                                <connections>
-                                    <action selector="addDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8oJ-65-aPk"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="QfQ-gk-DkK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="ROT-Dk-wKZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QfQ-gk-DkK" secondAttribute="trailing" constant="10" id="V4w-ud-s7N"/>
                             <constraint firstItem="QfQ-gk-DkK" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="jin-0B-cjS"/>
                             <constraint firstItem="QfQ-gk-DkK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="waJ-fS-nGD"/>
                         </constraints>

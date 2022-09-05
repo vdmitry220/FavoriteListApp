@@ -1,17 +1,17 @@
 
 import UIKit
 
-protocol NewFilmView: AnyObject {
+protocol NewMovieView: AnyObject {
     
 }
 
-class NewFilmViewController: UIViewController {
+class NewMovieViewController: UIViewController {
     
     @IBOutlet private weak var movieTtitle: UITextField!
     @IBOutlet private weak var year: UITextField!
     @IBOutlet private weak var addButton: UIButton!
     
-    private var presenter: NewFilmPresenter!
+    private var presenter: NewMoviePresenter!
 
 
     override func viewDidLoad() {
@@ -19,7 +19,7 @@ class NewFilmViewController: UIViewController {
 
     }
     
-    func inject(presenter: NewFilmPresenter) {
+    func inject(presenter: NewMoviePresenter) {
         self.presenter = presenter
     }
     
@@ -28,6 +28,6 @@ class NewFilmViewController: UIViewController {
     }
 }
 
-extension NewFilmViewController: NewFilmView {
+extension NewMovieViewController: NewMovieView {
     
 }

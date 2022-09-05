@@ -5,27 +5,27 @@ import Swinject
 import SwinjectAutoregistration
 import Rswift
 
-class NewFilmAssembly {}
+class NewMovieAssembly {}
 
 // MARK: - FavoriteFilmsAssembly
 
-extension NewFilmAssembly: Assembly {
+extension NewMovieAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(NewFilmViewController.self) { resolver in
+        container.register(NewMovieViewController.self) { resolver in
             let view = R.storyboard.newFilm.instantiateInitialViewController()!
             
-            let presenter = resolver.resolve(NewFilmPresenter.self, argument: view)!
+            let presenter = resolver.resolve(NewMoviePresenter.self, argument: view)!
             view.inject(presenter: presenter)
             
             return view
         }
         
-        container.register(NewFilmPresenter.self) { (resolver, view: NewFilmViewController) in
+        container.register(NewMoviePresenter.self) { (resolver, view: NewMovieViewController) in
             let coordinator = resolver.resolve(FavoriteCoordinator.self)!
             let dataService = resolver.resolve(DataService.self)!
             
-            return NewFilmPresenterImp(
+            return NewMoviePresenterImp(
                 view: view,
                 coordinator: coordinator,
                 dataService: dataService)

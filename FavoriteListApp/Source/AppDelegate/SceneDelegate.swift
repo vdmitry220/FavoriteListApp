@@ -25,7 +25,7 @@ extension SceneDelegate {
         let modulesAssembler = Assembler(
             [
                 FavoriteAssembly(),
-                NewFilmAssembly()
+                NewMovieAssembly()
             ],
             parent: serviceAssembler)
         
